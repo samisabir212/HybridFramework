@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite1]" parallel="none">
+  <test name="Test A1(failed)" parallel="none">
+    <classes>
+      <class name="suite1.TestA1">
+        <methods>
+          <include name="testA1" invocation-numbers="0 1"/>
+        </methods>
+      </class> <!-- suite1.TestA1 -->
+    </classes>
+  </test> <!-- Test A1(failed) -->
+  <test name="Test A2(failed)" parallel="none">
+    <classes>
+      <class name="suite1.TestA2">
+        <methods>
+          <include name="testA2" invocation-numbers="3 4"/>
+        </methods>
+      </class> <!-- suite1.TestA2 -->
+    </classes>
+  </test> <!-- Test A2(failed) -->
+  <test name="Test A3(failed)" parallel="none">
+    <classes>
+      <class name="suite1.TestA3">
+        <methods>
+          <include name="testA3" invocation-numbers="0 1 2 3"/>
+        </methods>
+      </class> <!-- suite1.TestA3 -->
+    </classes>
+  </test> <!-- Test A3(failed) -->
+</suite> <!-- Failed suite [Suite1] -->
