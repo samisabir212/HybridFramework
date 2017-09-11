@@ -66,11 +66,13 @@ public class TestData {
 			
 		}
 
+
 		System.out.println("Total rows are : "+rows);
-		
+
+
+
 		//printing the test data
-		
-		for(int row=dataStartRowNum; row<dataStartRowNum+rows;row++){
+		for(int row = dataStartRowNum; row<dataStartRowNum+rows;row++){
 			
 			for(int col=0;col<cols;col++){
 				
