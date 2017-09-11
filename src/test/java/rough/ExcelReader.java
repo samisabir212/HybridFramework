@@ -16,26 +16,34 @@ import java.util.Calendar;
 
 
 public class ExcelReader {
-	
+
+
+
 	public  String path;
 	public  FileInputStream fis = null;
 	public  FileOutputStream fileOut =null;
+
 	private XSSFWorkbook workbook = null;
 	private XSSFSheet sheet = null;
 	private XSSFRow row   =null;
 	private XSSFCell cell = null;
-	
+
+
+
 	public ExcelReader(String path) {
-		
+		/*
+		* in a try catch block to catch the excepetion error for debugging
+		* */
+
 		this.path=path;
 		try {
-			fis = new FileInputStream(path);
-			workbook = new XSSFWorkbook(fis);
-			sheet = workbook.getSheetAt(0);
-			fis.close();
+			fis = new FileInputStream(path); //to read a file you need FileInputStream Class
+			workbook = new XSSFWorkbook(fis); //getting the workbook of the excel file
+			sheet = workbook.getSheetAt(0); //getting the sheet at some index from the workbook
+			fis.close(); //closing the excel connection
 		} catch (Exception e) {
 			
-			e.printStackTrace();
+			e.printStackTrace(); //debugg after printing error to console
 		} 
 		
 	}
@@ -43,7 +51,8 @@ public class ExcelReader {
 	
 	// returns the row count in a sheet
 	public int getRowCount(String sheetName){
-		int index = workbook.getSheetIndex(sheetName);
+
+		int index = workbook.getSheetIndex(sheetName); //getting
 		if(index==-1)
 			return 0;
 		else{
