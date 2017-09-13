@@ -49,7 +49,7 @@ public class CommonUtils {
 			
 			String testSuiteName = excel.getCellData(sheetName, Constants.TEST_SUITE_COL, rowNum);
 			
-			if(testSuiteName.equalsIgnoreCase(suiteName)){
+ 			if(testSuiteName.equalsIgnoreCase(suiteName)){
 				
 				String runMode = excel.getCellData(sheetName, Constants.SUITE_RUNMODE_COL, rowNum);
 				if(runMode.equalsIgnoreCase(Constants.RUNMODE_YES)){

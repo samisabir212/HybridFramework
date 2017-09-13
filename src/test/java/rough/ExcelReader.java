@@ -25,7 +25,7 @@ public class ExcelReader {
 
 	private XSSFWorkbook workbook = null;
 	private XSSFSheet sheet = null;
-	private XSSFRow row   =null;
+	private XSSFRow row = null;
 	private XSSFCell cell = null;
 
 

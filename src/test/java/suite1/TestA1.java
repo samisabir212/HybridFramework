@@ -13,8 +13,13 @@ import Utility.ExcelReader;
 
 
 public class TestA1 {
-	
-	@Test(dataProviderClass=DataProviders.class,dataProvider="getDataSuite1")
+
+	/*
+	* the data provider class contains
+	* the data for all TestSuites
+	* */
+
+	@Test(dataProviderClass = DataProviders.class, dataProvider="getDataSuite1")
 	public void testA1(Hashtable<String,String> data){
 		
 		ExcelReader excel = new ExcelReader(Constants.SUITE1_XL_PATH);
